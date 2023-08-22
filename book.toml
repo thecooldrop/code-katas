@@ -1,0 +1,6 @@
+[book]
+authors = ["TheCoolDrop"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Code Katas"
