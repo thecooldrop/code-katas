@@ -20,3 +20,7 @@ configuration properties to our Spring Boot application.
 In order to configure the Spring Boot application with
 TLS we use `server.ssl.*` Spring Boot application properties.
 
+[//]: # (TODO: Change the hello world controller with Spring Pet Clinic for more
+WOW effect)
+
+[//]: # (Add guidance on generating actual cert with keytool)
