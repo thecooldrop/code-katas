@@ -5,3 +5,4 @@
 - [0003_AdaptASpringBootAppToRequireBasicAuthenticationForAllPages](./0003_AdaptASpringBootAppToRequireBasicAuthenticationForAllPages.md)
 - [0004_BasicUsageOfRequestAttributesInSpring](./0004_BasicUsageOfRequestAttributesInSpring.md)
 - [0005_WritingStringsToRedis](./0005_WritingStringsToRedis.md)
+- [0006_UseRedisAsBasicQueue](./0006_RedisBasicQueue.md)
