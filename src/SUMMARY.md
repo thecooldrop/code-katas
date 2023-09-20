@@ -4,3 +4,4 @@
 - [0002_WriteSpringBootHelloWorldControllerProtectedByHttps](./0002_WriteSpringBootHelloWorldControllerProtectedByHttps.md)
 - [0003_AdaptASpringBootAppToRequireBasicAuthenticationForAllPages](./0003_AdaptASpringBootAppToRequireBasicAuthenticationForAllPages.md)
 - [0004_BasicUsageOfRequestAttributesInSpring](./0004_BasicUsageOfRequestAttributesInSpring.md)
+- [0005_WritingStringsToRedis](./0005_WritingStringsToRedis.md)
