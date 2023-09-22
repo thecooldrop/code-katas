@@ -1,0 +1,18 @@
+services:
+  redis:
+    container_name: redis
+    networks:
+      - apps
+    image: redis:7.2.1
+  client:
+    container_name: client
+    networks:
+      - apps
+    build: ./redis-client
+  servier:
+    container_name: server
+    networks:
+      - apps
+    build: ./redis-server
+networks:
+  apps:
