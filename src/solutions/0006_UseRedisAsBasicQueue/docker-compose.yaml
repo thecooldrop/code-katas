@@ -5,19 +5,28 @@ services:
   client:
     networks:
       - apps
-    build:
-      dockerfile: ./redis-client/Dockerfile
-      context: ./redis-client
+    build: ./redis-client
     container_name: client
+    depends_on:
+      redis:
+        condition: service_healthy
   server:
     networks:
       - apps
-    build:
-      dockerfile: ./redis-server/Dockerfile
-      context: ./redis-server
+    build: ./redis-server
     container_name: server
+    depends_on:
+      redis:
+        condition: service_healthy
   redis:
     networks:
       - apps
     image: redis:7.2.1-alpine3.18
     container_name: redis
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - --raw
+        - incr
+        - ping
