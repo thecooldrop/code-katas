@@ -1,7 +1,6 @@
-FROM maven:3.9.4-amazoncorretto-20-al2023 as builder
+FROM maven:3.9.4-eclipse-temurin-20 as builder
 WORKDIR /build
-COPY /src /src
-COPY pom.xml pom.xml
+COPY . .
 RUN mvn clean package
 
 FROM eclipse-temurin:20-jre-alpine
