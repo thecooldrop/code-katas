@@ -1,18 +1,23 @@
-services:
-  redis:
-    container_name: redis
-    networks:
-      - apps
-    image: redis:7.2.1
-  client:
-    container_name: client
-    networks:
-      - apps
-    build: ./redis-client
-  servier:
-    container_name: server
-    networks:
-      - apps
-    build: ./redis-server
 networks:
   apps:
+
+services:
+  client:
+    networks:
+      - apps
+    build:
+      dockerfile: ./redis-client/Dockerfile
+      context: ./redis-client
+    container_name: client
+  server:
+    networks:
+      - apps
+    build:
+      dockerfile: ./redis-server/Dockerfile
+      context: ./redis-server
+    container_name: server
+  redis:
+    networks:
+      - apps
+    image: redis:7.2.1-alpine3.18
+    container_name: redis
